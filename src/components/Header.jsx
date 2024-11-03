@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'; // Importing motion for animations
-import logo from '../assets/Images/logo.png'; // Adjust the path as needed
-import rtuLogo from '../assets/Images/rtu.jpg'; // Adjust the path as needed
+import logo from '../assets/images/logo.png'; // Adjust the path as needed
+import rtuLogo from '../assets/images/rtu.jpg'; // Adjust the path as needed
 
 const Header = () => {
   return (

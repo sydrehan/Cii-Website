@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import ciiImage from '../assets/Images/cii-1.jpg'; // Adjust the path as needed
+import ciiImage from '../assets/images/cii-1.jpg'; // Adjust the path as needed
 
 const Header2 = () => {
   return (

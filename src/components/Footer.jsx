@@ -1,4 +1,4 @@
-import ciiImage from '../assets/Images/cii-1.jpg';
+import ciiImage from '../assets/images/cii-1.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'; // Import social media icons
 import { motion } from 'framer-motion';

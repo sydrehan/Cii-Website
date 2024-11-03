@@ -1,11 +1,11 @@
 import Slideshow from "../components/slideshow"; // Ensure the path is correct
 import Card from '../components/Card'; // Import the Card component
-import Service1 from '../assets/Images/1.png'; // Import your images
-import Service2 from '../assets/Images/2.png';
-import Service3 from '../assets/Images/3.png';
-import Service4 from '../assets/Images/4.png';
-import Service5 from '../assets/Images/5.png';  
-import Service6 from '../assets/Images/6.png';
+import Service2 from '../assets/images/2.png';
+import Service1 from '../assets/images/1.png'; // Import your images
+import Service3 from '../assets/images/3.png';
+import Service4 from '../assets/images/4.png';
+import Service5 from '../assets/images/5.png';  
+import Service6 from '../assets/images/6.png';
 import ns from "../assets/Images/ns.jpg";
 import anna from "../assets/Images/anna.jpg";
 
