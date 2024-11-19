@@ -1,21 +1,19 @@
-import ciiImage from '../assets/images/cii-1.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'; // Import social media icons
+import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
+import ciiImage from '../assets/images/cii-1.jpg';  // Make sure the image is imported correctly
 
 const Footer = () => {
   return (
     <>
       <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-8">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center space-x-8">
+          <div className="flex flex-wrap justify-between items-center space-x-8 space-y-4 sm:space-y-0">
             {/* Left section - Logo and Text content */}
             <div className="flex items-center space-x-4">
-              {/* Logo */}
               <div className="flex-shrink-0 pr-10">
-                <img src={ciiImage} alt="Innovation Logo" className="h-20 w-auto rounded-lg shadow-lg" /> {/* Added rounded corners and shadow for a polished look */}
+                <img src={ciiImage} alt="Innovation Logo" className="h-20 w-auto rounded-lg shadow-lg" />
               </div>
-              {/* Text content next to the logo */}
               <div className="pr-10">
                 <h1 className="text-3xl font-bold text-gray-200">Innovation & Incubation</h1>
                 <p className="text-sm text-gray-400">© 2024 All Rights Reserved</p>
@@ -31,8 +29,8 @@ const Footer = () => {
               </p>
             </div>
 
-            {/* Right section - Social Media Icons */}
-            <div className="flex space-x-6">
+            {/* Social Media Icons */}
+            <div className="flex space-x-6 text-3xl sm:text-2xl">
               <motion.a
                 href="https://www.facebook.com/gitsudr/"
                 target="_blank"
