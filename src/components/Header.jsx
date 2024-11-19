@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion'; // Importing motion for animations
-import logo from '../assets/images/logo.png'; // Adjust the path as needed
-import rtuLogo from '../assets/images/rtu.jpg'; // Adjust the path as needed
 
 const Header = () => {
   return (
@@ -16,7 +14,7 @@ const Header = () => {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.8 }} // Scale-up effect for the logo
       >
-        <img width="110px" src={logo} alt="Geetanjali Institute Logo" />
+        <img width="110px" src="/images/logo.png" alt="Geetanjali Institute Logo" />
       </motion.span>
 
       {/* Text in the Center */}
@@ -58,7 +56,7 @@ const Header = () => {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <img width="110px" src={rtuLogo} alt="RTU Logo" />
+        <img width="110px" src="/images/rtu.jpg" alt="RTU Logo" />
       </motion.span>
     </motion.div>
   );

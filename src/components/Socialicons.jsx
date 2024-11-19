@@ -14,10 +14,10 @@ const SocialIcons = () => {
   };
 
   return (
-    <div className="fixed top-1/2 left-0 transform -translate-y-1/2 flex flex-col space-y-2 z-50">
+    <div className="fixed top-1/2 left-0 transform -translate-y-1/2 flex flex-col space-y-4 z-50">
       <motion.a
-        href="https://www.facebook.com"
-        target="https://www.facebook.com/gitsudr/"
+        href="https://www.facebook.com/gitsudr/"
+        target="_blank"
         rel="noopener noreferrer"
         className="bg-blue-600 text-white p-3 rounded-md transition-transform duration-300"
         whileHover="hover" // Apply hover animation
@@ -26,8 +26,8 @@ const SocialIcons = () => {
         <FontAwesomeIcon icon={faFacebook} size="lg" />
       </motion.a>
       <motion.a
-        href="https://www.twitter.com"
-        target="https://x.com/gitsudr"
+        href="https://x.com/gitsudr"
+        target="_blank"
         rel="noopener noreferrer"
         className="bg-blue-400 text-white p-3 rounded-md transition-transform duration-300"
         whileHover="hover"
@@ -36,8 +36,8 @@ const SocialIcons = () => {
         <FontAwesomeIcon icon={faTwitter} size="lg" />
       </motion.a>
       <motion.a
-        href="https://www.instagram.com"
-        target="https://www.instagram.com/gitsudr/p/DAV6H8AsNDj/"
+        href="https://www.instagram.com/gitsudr/p/DAV6H8AsNDj/"
+        target="_blank"
         rel="noopener noreferrer"
         className="bg-pink-500 text-white p-3 rounded-md transition-transform duration-300"
         whileHover="hover"
@@ -46,8 +46,8 @@ const SocialIcons = () => {
         <FontAwesomeIcon icon={faInstagram} size="lg" />
       </motion.a>
       <motion.a
-        href="https://www.linkedin.com"
-        target="https://www.linkedin.com/school/geetanjali-institute-of-technical-studies-udaipur/?originalSubdomain=in"
+        href="https://www.linkedin.com/school/geetanjali-institute-of-technical-studies-udaipur/?originalSubdomain=in"
+        target="_blank"
         rel="noopener noreferrer"
         className="bg-blue-700 text-white p-3 rounded-md transition-transform duration-300"
         whileHover="hover"
