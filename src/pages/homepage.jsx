@@ -1,24 +1,14 @@
 import Slideshow from "../components/slideshow"; // Ensure the path is correct
 import Card from '../components/Card'; // Import the Card component
 
-// Updated image imports (images moved to the public folder)
-import Service1 from '/images/1.png'; // Now from /public/images/1.png
-import Service2 from '/images/2.png'; // From /public/images/2.png
-import Service3 from '/images/3.png';
-import Service4 from '/images/4.png';
-import Service5 from '/images/5.png';  
-import Service6 from '/images/6.png';
-import ns from "/images/ns.jpg"; // From /public/images/ns.jpg
-import anna from "/images/anna.jpg"; // From /public/images/anna.jpg
-
 function Homepage() {
   const offerings = [
-    { title: 'Benefits from Host Institute', description: 'Financial Accounting and Management Services to our Incubatees', image: Service1 },
-    { title: 'Financial Assistance to grow', description: 'Various Funds to innovative and technology related Startups', image: Service2 },
-    { title: 'High-End Tech Support', description: 'We provide a complete state of Technical Support and Fabrication Facilities', image: Service3 },
-    { title: 'Infrastructure Facility', description: 'We provide State of Art Infrastructure to our Incubatees', image: Service4 },
-    { title: 'Mentorship & Advisory', description: 'Academicians and industry leaders who provide expert mentorship', image: Service5 },
-    { title: 'Networking & Outreach', description: 'Networking to our incubatees through events and partner organizations', image: Service6 },
+    { title: 'Benefits from Host Institute', description: 'Financial Accounting and Management Services to our Incubatees', image: '/assets/images/1.png' },
+    { title: 'Financial Assistance to grow', description: 'Various Funds to innovative and technology related Startups', image: '/assets/images/2.png' },
+    { title: 'High-End Tech Support', description: 'We provide a complete state of Technical Support and Fabrication Facilities', image: '/assets/images/3.png' },
+    { title: 'Infrastructure Facility', description: 'We provide State of Art Infrastructure to our Incubatees', image: '/assets/images/4.png' },
+    { title: 'Mentorship & Advisory', description: 'Academicians and industry leaders who provide expert mentorship', image: '/assets/images/5.png' },
+    { title: 'Networking & Outreach', description: 'Networking to our incubatees through events and partner organizations', image: '/assets/images/6.png' },
   ];
 
   return (
@@ -42,7 +32,7 @@ function Homepage() {
           </div>
           <div className="w-full flex justify-center">
             <img
-              src={ns} // Image path updated to /images/ns.jpg
+              src="/assets/images/ns.jpg"  // Correct path for public folder image
               alt="Director"
               className="w-64 h-64 object-cover rounded-lg shadow-lg"
             />
@@ -64,7 +54,7 @@ function Homepage() {
           </div>
           <div className="w-full flex justify-center ml-10">
             <img
-              src={anna} // Image path updated to /images/anna.jpg
+              src="/assets/images/anna.jpg"  // Correct path for public folder image
               alt="CII Head"
               className="w-64 h-64 object-cover rounded-lg shadow-lg"
             />
@@ -84,7 +74,7 @@ function Homepage() {
               key={index} 
               title={offering.title} 
               description={offering.description} 
-              image={offering.image} // Pass the image prop
+              image={offering.image} // Correct image path for public folder
             />
           ))}
         </div>
