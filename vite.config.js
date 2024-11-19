@@ -14,4 +14,5 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'), // Alias '@' to './src' directory
     },
   },
+  base: './', // Ensure assets are referenced relative to the root
 });
