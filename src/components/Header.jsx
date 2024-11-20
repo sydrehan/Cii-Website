@@ -14,7 +14,7 @@ const Header = () => {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.8 }} // Scale-up effect for the logo
       >
-        <img width="110px" src="/images/logo.png" alt="Geetanjali Institute Logo" />
+        <img width="110px" src="../src/assets/images/logo.png" alt="Geetanjali Institute Logo" />
       </motion.span>
 
       {/* Text in the Center */}
@@ -56,7 +56,7 @@ const Header = () => {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <img width="110px" src="/images/rtu.jpg" alt="RTU Logo" />
+        <img width="110px" src="../src/assets/images/rtu.jpg" alt="RTU Logo" />
       </motion.span>
     </motion.div>
   );

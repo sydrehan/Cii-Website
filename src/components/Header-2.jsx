@@ -14,7 +14,7 @@ const Header2 = () => {
         
         {/* Image with 3D rotation and scale effect on hover */}
         <motion.img
-          src="/images/cii-1.jpg" // Updated path for the image (moved to public/images)
+          src="../src/assets/images/cii-1.jpg" // Updated path for the image (moved to public/images)
           alt="Center of Innovation and Incubation"
           className="w-[20vh] h-[20vh]"
           whileHover={{ scale: 1.0, rotateY: 15 }} // Scale and rotate the image on hover
