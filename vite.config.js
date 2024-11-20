@@ -9,6 +9,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // Vite configuration
 export default defineConfig({
   plugins: [react()],
+  assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg'],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'), // Alias '@' to './src' directory

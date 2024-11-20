@@ -14,7 +14,7 @@ import ciiHeadImage from "../assets/images/anna.jpg";
 function Homepage() {
   const offerings = [
     { title: "Benefits from Host Institute", description: "Financial Accounting and Management Services to our Incubatees", image: image1 },
-    { title: "Financial Assistance to grow", description: "Various Funds to innovative and technology related Startups", image: image2 },
+    { title: "Financial Assistance to grow", description: "Various Funds to innovative and technology-related Startups", image: image2 },
     { title: "High-End Tech Support", description: "We provide a complete state of Technical Support and Fabrication Facilities", image: image3 },
     { title: "Infrastructure Facility", description: "We provide State of Art Infrastructure to our Incubatees", image: image4 },
     { title: "Mentorship & Advisory", description: "Academicians and industry leaders who provide expert mentorship", image: image5 },
@@ -91,7 +91,7 @@ function Homepage() {
               key={index}
               title={offering.title}
               description={offering.description}
-              image={offering.image} // Correctly imported image
+              image={offering.image} // Pass imported image directly
             />
           ))}
         </div>
