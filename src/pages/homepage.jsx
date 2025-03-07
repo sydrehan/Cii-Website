@@ -23,7 +23,7 @@ function Homepage() {
 
   return (
     <div>
-      <h1 className="text-center text-zinc-700 text-6xl pointer-events-none font-Montserrat p-10">
+      <h1 className="text-center text-zinc-700 text-6xl pointer-events-none font-poppins p-10">
         WELCOME TO OUR WEBSITE
       </h1>
       <Slideshow />

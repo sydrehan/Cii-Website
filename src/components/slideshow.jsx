@@ -1,85 +1,63 @@
-import Slider from 'react-slick';
-import PropTypes from 'prop-types';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import { motion } from 'framer-motion';
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
-// Correct image paths using public folder reference
-const slides = [
-  { image: '/assets/Images/GITS_RND_3.jpg' },
-  { image: '/assets/Images/GITS_RND_4-1.jpg' },
-  { image: '/assets/Images/GITS_RND_5.jpg' },
-  { image: '/assets/Images/GITS_RND_7.jpg' },
-];
+// Import images
+import annaImage from "../assets/images/anna.jpg";
+import rnd4Image from "../assets/images/GITS_RND_4-1.jpg";
+import rnd5Image from "../assets/images/GITS_RND_5.jpg";
+import rnd7Image from "../assets/images/GITS_RND_7.jpg";
 
-// Slideshow component
+const slides = [annaImage, rnd4Image, rnd5Image, rnd7Image];
+
 const Slideshow = () => {
-  const settings = {
-    dots: false, // Disable dots
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000, // Time between slides
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 4000);
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % slides.length);
   };
 
   return (
-    <div className="relative mx-auto w-full sm:w-1/2 p-5 bg-transparent top-2">
-      <Slider {...settings}>
-        {slides.map((slide, index) => (
+    <div className="relative mx-auto w-[95%] max-w-7xl p-10 bg-transparent mt-4 mb-10">
+      
+      {/* Slideshow Container */}
+      <div className="relative w-full h-[60vh] sm:h-[70vh] overflow-hidden rounded-lg shadow-lg">
+        {slides.map((image, index) => (
           <motion.div
             key={index}
-            className="flex flex-col items-center justify-center h-80"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+            className="absolute w-full h-full"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={index === currentIndex ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
           >
             <img
-              src={slide.image}
+              src={image}
               alt={`Slide ${index + 1}`}
-              className="w-full h-auto object-cover"
-              loading="lazy" // Add lazy loading for performance improvement
+              className="w-full h-full object-cover rounded-lg"
+              loading="lazy"
             />
           </motion.div>
         ))}
-      </Slider>
+      </div>
+
+      {/* Dots Indicator */}
+      <div className="flex justify-center mt-4 space-x-2">
+        {slides.map((_, index) => (
+          <div
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${
+              index === currentIndex ? "bg-gray-800 scale-125" : "bg-gray-400"
+            }`}
+          />
+        ))}
+      </div>
     </div>
   );
-};
-
-// Custom Next Arrow
-const NextArrow = ({ onClick }) => (
-  <button
-    className="absolute top-1/2 right-[-10%] transform -translate-y-1/2 bg-white rounded-full p-2 text-2xl hover:bg-gray-200"
-    onClick={onClick}
-    aria-label="Next Slide"
-  >
-    &gt;
-  </button>
-);
-
-// Prop validation for NextArrow
-NextArrow.propTypes = {
-  onClick: PropTypes.func.isRequired,
-};
-
-// Custom Prev Arrow
-const PrevArrow = ({ onClick }) => (
-  <button
-    className="absolute top-1/2 left-[-10%] transform -translate-y-1/2 bg-white rounded-full p-2 text-2xl hover:bg-gray-200"
-    onClick={onClick}
-    aria-label="Previous Slide"
-  >
-    &lt;
-  </button>
-);
-
-// Prop validation for PrevArrow
-PrevArrow.propTypes = {
-  onClick: PropTypes.func.isRequired,
 };
 
 export default Slideshow;
