@@ -6,6 +6,7 @@ import rtuLogo from '../assets/images/rtu.jpg';
 
 const Header = () => {
   return (
+    <div className='bg-[#1864a4] w-full'>
     <motion.div
       className="flex justify-evenly items-center h-[20vh] pt-20 pb-20 font-montserrat"
       initial={{ opacity: 0 }}
@@ -29,7 +30,8 @@ const Header = () => {
         transition={{ duration: 1.2 }} // Slide-down effect for text
       >
         <motion.h1
-          className="text-5xl font-medium text-[#24315D] mb-1"
+          // className="text-5xl font-medium text-[#24315D] mb-1  "
+          className='text-white text-5xl font-medium mb-1'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -45,7 +47,7 @@ const Header = () => {
           Affiliated to Rajasthan Technical University, Kota and Approved by AICTE, New Delhi
         </motion.p>
         <motion.p
-          className="text-xl font-normal font-medium text-[#932AC9]"
+          className="text-xl font-normal font-medium text-[#e0aaff]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
@@ -63,7 +65,9 @@ const Header = () => {
         <img width="110px" src={rtuLogo} alt="RTU Logo" />
       </motion.span>
     </motion.div>
+    </div>
   );
+  
 };
 
 export default Header;
