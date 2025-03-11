@@ -23,17 +23,14 @@ function Homepage() {
 
   return (
     <div>
-    
       <Slideshow />
 
       {/* Director's Message Section */}
-      <section className="bg-blue-100 py-12 px-6 mb-10 mx-auto text-center">
-        <div className="block">
-          <h2 className="text-5xl font-bold text-gray-800 mb-8">Message from the Director</h2>
-        </div>
-        <div className="container w-[70%] mx-auto flex flex-col-reverse md:flex-row items-center justify-between">
-          <div className="w-100 text-center mt-6 mr-10">
-            <p className="text-lg text-gray-700 mb-4">
+      <section className="bg-[#f9f7f3] py-12 px-6 mb-10 mx-auto">
+        <div className="container w-[70%] mx-auto flex flex-col md:flex-row items-center justify-between">
+          <div className="w-1/2 text-left">
+            <h2 className="text-5xl font-bold text-gray-800 mb-6">Message from the Director</h2>
+            <p className="text-lg text-gray-700 mb-4 leading-relaxed">
               GITS is a premier Institute of higher learning in the wide areas of Engineering, Technology, Management and
               associated science. Over a long and proud history, GITS have pushed the limits of knowledge and innovation,
               and carved a niche in Technical education with emphasis on quality through up-to-date latest curriculum and
@@ -41,24 +38,22 @@ function Homepage() {
             </p>
             <p className="text-lg font-medium text-gray-700">- Dr. N.S Rathore, Director</p>
           </div>
-          <div className="w-full flex justify-center">
+          <div className="w-1/2 flex justify-end">
             <img
               src={directorImage}
               alt="Director"
-              className="w-64 h-64 object-cover rounded-lg shadow-lg"
+              className="w-72 h-72 object-cover rounded-lg shadow-lg border-4 border-gray-300"
             />
           </div>
         </div>
       </section>
 
       {/* CII Head's Message */}
-      <section className="bg-gray-100 py-12 px-6 wb-10 mx-auto text-center">
-        <div className="block">
-          <h2 className="text-5xl font-bold text-gray-800 mb-8">CII Head Message</h2>
-        </div>
-        <div className="container w-[70%] mx-auto flex flex-col-reverse md:flex-row items-center justify-between">
-          <div className="w-100 text-center mt-6 mr-5">
-            <p className="text-lg text-gray-700 mb-4">
+      <section className="bg-gray-100 py-12 px-6 wb-10 mx-auto">
+        <div className="container w-[70%] mx-auto flex flex-col md:flex-row items-center justify-between">
+          <div className="w-1/2 text-left">
+            <h2 className="text-5xl font-bold text-gray-800 mb-6">CII Head Message</h2>
+            <p className="text-lg text-gray-700 mb-4 leading-relaxed">
               Welcome to our Innovation Lab at Geetanjali Institute of Technical Studies. Our mission is to foster creativity
               and turn ideas into impactful solutions. With support from CII, we aim to bridge the gap between academia and
               industry, empowering students to work on real-world challenges. Join us in shaping the future of technology
@@ -66,11 +61,11 @@ function Homepage() {
             </p>
             <p className="text-lg font-medium text-gray-700">- Mr. Latif Khan, Head Of CII</p>
           </div>
-          <div className="w-full flex justify-center ml-10">
+          <div className="w-1/2 flex justify-end">
             <img
               src={ciiHeadImage}
               alt="CII Head"
-              className="w-64 h-64 object-cover rounded-lg shadow-lg"
+              className="w-72 h-72 object-cover rounded-lg shadow-lg border-4 border-gray-300"
             />
           </div>
         </div>
