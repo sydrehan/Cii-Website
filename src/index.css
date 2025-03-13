@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+body, a, button {
+    cursor: url('/cursor.cur'), auto; /* Custom cursor for all elements */
+}
+
+input, textarea {
+    cursor: text; /* Keep default text cursor for input fields */
+}
+
 body {
-    cursor: url('/cursor.cur'), auto; /* Use '/about/cursor.png' if inside the 'about' folder */
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Full viewport height */
