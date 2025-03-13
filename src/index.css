@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    cursor: url('/cursor.png'), auto; /* Use '/about/cursor.png' if inside the 'about' folder */
+    cursor: url('/cursor.cur'), auto; /* Use '/about/cursor.png' if inside the 'about' folder */
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Full viewport height */
