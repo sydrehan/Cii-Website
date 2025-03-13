@@ -1,21 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body {
+    cursor: url('/cursor.png'), auto; /* Use '/about/cursor.png' if inside the 'about' folder */
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Full viewport height */
     margin: 0;
-  }
-  
-  #root {
+}
+
+#root {
     flex-grow: 1;
-  }
-  
-  footer {
-    background-color: #111827; /* Tailwind 'bg-gray-900' equivalent */
+}
+
+footer {
+    background-color: #111827; /* Tailwind 'bg-gray-900' */
     color: #ffffff;
     padding: 1.5rem;
     text-align: center;
-  }
-  
+}
